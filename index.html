@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reporte Plan Lector 2026 | José Gálvez</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="institution-logos">
+      <img src="logo.png" alt="Escudo de la Institución Educativa José Gálvez">
+    </div>
+    <div class="brand">
+      <div>
+        <p class="eyebrow">Institución Educativa José Gálvez</p>
+        <h1>Reporte Plan Lector <span>2026</span></h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <img src="LM.png" alt="Emblema de la Unidad de Gestión Educativa Local La Mar">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">Modo oscuro</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="report-hero">
+      <p class="eyebrow">Panel de análisis institucional</p>
+      <h2>🔎 Reportes del Plan Lector</h2>
+      <p>Selecciona grado y sección. Todo se recalcula con las semanas cargadas y estudiantes con puntaje.</p>
+      <div class="scale-note">Escala: <b>AD</b> 18–20 · <b>A</b> 14–17 · <b>B</b> 11–13 · <b>C</b> 00–10</div>
+    </section>
+
+    <section class="report-panel filters-panel">
+      <div class="panel-label">Filtros de selección</div>
+      <div class="report-filters">
+        <label>Grado<select id="gradeFilter"><option value="all">TODOS</option></select></label>
+        <label>Sección<select id="sectionFilter"><option value="all">TODAS</option></select></label>
+      </div>
+      <p class="selection-message" id="selectionMessage"></p>
+    </section>
+
+    <section class="report-panel">
+      <div class="section-heading"><div><p class="eyebrow">Distribución</p><h3>Niveles de logro de la selección</h3></div></div>
+      <div class="achievement-table-wrap"><table class="achievement-table"><thead><tr><th>Nivel</th><th>Rango</th><th>N.º estudiantes</th><th>%</th><th>Interpretación</th></tr></thead><tbody id="achievementBody"></tbody></table></div>
+    </section>
+
+    <section class="report-panel weekly-panel">
+      <div class="section-heading"><div><p class="eyebrow">Evolución</p><h3>Reportes por semana</h3></div></div>
+      <div class="table-wrap"><table class="weekly-table"><thead><tr><th>Semana</th><th>Estado</th><th>Evaluados</th><th>Promedio</th><th>AD</th><th>A</th><th>B</th><th>C</th><th>% AD + A</th></tr></thead><tbody id="weeklyBody"></tbody></table></div>
+    </section>
+  </main>
+  <footer>Reporte Plan Lector 2026 · Hoja REPORTES · Datos consolidados de las semanas 1 a 3</footer>
+  <script src="report-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
